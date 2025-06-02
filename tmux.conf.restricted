@@ -1,0 +1,34 @@
+# Ergo SSH Gateway TMUX Config
+
+### --- Basic Safety/Lockdown --- ###
+unbind-key -a            # Unbind all keys, reset to a clean slate
+set-option -g prefix None
+set-option -g allow-rename off
+set-option -g set-titles off
+
+# Bind Navigation
+
+# Ctrl + Left/Right arrows for previous/next window
+bind -n C-Left previous-window
+bind -n C-Right next-window
+
+
+# Disable shell spawns, detaching, command prompt, etc.
+unbind c     # new window
+unbind %     # vertical split
+unbind '"'   # horizontal split
+unbind :     # command prompt
+unbind d     # detach
+unbind z     # zoom
+unbind &     # kill window
+unbind x     # kill pane
+unbind s     # window list
+unbind n     # next window
+unbind p     # previous window
+
+### --- Kill Session --- ###
+unbind -n C-q
+bind -n C-q kill-session
+
+# Mouse support
+set-option -g mouse on
