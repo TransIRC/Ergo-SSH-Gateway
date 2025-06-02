@@ -46,18 +46,18 @@ cat > "$HOME/.weechat/irc.conf" <<EOF
 server_buffer = independent
 
 [server]
-TransIRC.addresses = "127.0.0.1/$IRC_PORT"
-TransIRC.ssl = off
-TransIRC.nicks = "$NICK"
-TransIRC.username = "$NICK"
-TransIRC.realname = "$NICK"
-TransIRC.autoconnect = on
-TransIRC.sasl_mechanism = plain
-TransIRC.sasl_username = "$NICK"
-TransIRC.sasl_password = "$PASS"
+ErgoIRC.addresses = "127.0.0.1/$IRC_PORT"
+ErgoIRC.ssl = off
+ErgoIRC.nicks = "$NICK"
+ErgoIRC.username = "$NICK"
+ErgoIRC.realname = "$NICK"
+ErgoIRC.autoconnect = on
+ErgoIRC.sasl_mechanism = plain
+ErgoIRC.sasl_username = "$NICK"
+ErgoIRC.sasl_password = "$PASS"
 
 [network]
-TransIRC = on
+ErgoIRC = on
 EOF
 
 # Launch WeeChat
